@@ -7,12 +7,12 @@ namespace Calculations.Tests
     [TestFixture]
     public class Tests
     {
-        [TestCase(new int[] { 0, 4, 6, 25, 67, 101, 3 }, ExpectedResult = 101)]
-        [TestCase(new int[] { 0, 4, 6, 4, 10, 3 }, ExpectedResult = 10)]
-        [TestCase(new int[] { 0, 4, 6, -10, 25, 3, 1, 3 }, ExpectedResult = 25)]
-        [TestCase(new int[] { 0, 4, 6, 67, 1, 3 }, ExpectedResult = 67)]
-        [TestCase(new int[] { 0, 4, 6, 5, 2, 6, 0, 3 }, ExpectedResult = 6)]
-        [TestCase(new int[] { 67, 89, 3 }, ExpectedResult = 89)]
+        [TestCase(new int[] { 0, 4, 6, 25, 67, 101, 3 }, ExpectedResult = 67)]
+        [TestCase(new int[] { 0, 4, 6, 4, 10, 3 }, ExpectedResult = 6)]
+        [TestCase(new int[] { 0, 4, 6, -10, 25, 3, 1, 3 }, ExpectedResult = 6)]
+        [TestCase(new int[] { 0, 4, 2, 67, 1, 3 }, ExpectedResult = 4)]
+        [TestCase(new int[] { 0, 4, 6, 5, 2, 6, 0, 3 }, ExpectedResult = 5)]
+        [TestCase(new int[] { 67, 89, 3 }, ExpectedResult = 67)]
         public int GetMax2nd_original(params int[] inputArray) => FoundMax2nd_Original(inputArray);
 
         [Test]

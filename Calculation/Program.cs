@@ -39,7 +39,15 @@ namespace Calculation
                 }
             }
 
-            return inputArray[^1];
+            for (int i = inputArray.Length - 1; i >= 1; i--)
+            {
+                if(inputArray[i] > inputArray[i - 1])
+                {
+                    return inputArray[i - 1];
+                }
+            }
+
+            return inputArray[^2];
         }
     }
 }
